@@ -43,7 +43,7 @@ def rank_card():
     rank = [0, 0, 0]
 
     for i in range(5):
-        cards[i].get_atk()
+        cards[i].set_atk()
 
     for i in range(5):
         cards[i].priority = 1

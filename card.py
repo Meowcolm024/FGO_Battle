@@ -11,7 +11,7 @@ class Card:
         self.priority = 0  # the priority of the card
         self.atk = 1  # set atk of the card
 
-    def get_atk(self):
+    def set_atk(self):
         if self.status == 1:
             self.atk = self.atk * 2
         elif self.status == 2:
