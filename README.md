@@ -42,5 +42,5 @@ other versions, please change them QWQ
 
 The coordinates in the script ares based on screenshots from
 _Huawei Mate 10 Pro_ with a resolution of 2160x1080, you may 
-need to change some parameters if your phone is this resolution orz  
+need to change some parameters if your phone is not this resolution. QAQ  
 Just run _"test.py"_
