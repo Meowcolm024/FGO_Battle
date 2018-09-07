@@ -25,7 +25,7 @@ def marks(sh,):
 
 
 def test():
-    sh = 'test/t4.jpeg'
+    sh = 'test/t5.jpeg'
 
     cards(sh)
     marks(sh)

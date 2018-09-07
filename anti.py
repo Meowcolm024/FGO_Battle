@@ -10,8 +10,8 @@ def long_tap(x, y):
 
 
 def tap_card(x, y):
-    x0 = x + random.uniform(-100, 100)
-    y0 = y + random.uniform(-20, 200)
+    x0 = x + random.uniform(0, 100)
+    y0 = y + random.uniform(0, 150)
     long_tap(x0, y0)
 
 
