@@ -12,7 +12,7 @@ def main():
         if check(sh, 'res/start.png', 0.9) == 1:
             pos = location(sh, 'res/start.png', 0.9)
             # random tap
-            k = random.randrange(0, 3)
+            k = random.randrange(0, 2)
             for i in range(k):
                 random_tap(sh)
                 time.sleep(random.uniform(0.1, 0.3))
@@ -23,7 +23,7 @@ def main():
                 or check(sh, 'res/arts.png', 0.9) \
                 or check(sh, 'res/buster.png', 0.9):
             # random tap
-            j = random.randrange(0, 3)
+            j = random.randrange(0, 2)
             for i in range(j):
                 random_tap(sh)
                 time.sleep(random.uniform(0.1, 0.3))

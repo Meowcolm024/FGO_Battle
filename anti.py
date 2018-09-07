@@ -36,7 +36,7 @@ def random_tap(sh):  # random tap on the screen
             or check(sh, 'res/arts.png', 0.9) \
             or check(sh, 'res/buster.png', 0.9):
 
-        x1 = random.randrange(1200, 1800)
+        x1 = random.randrange(1600, 1800)
         y1 = random.randrange(200, 500)
 
         long_tap(x1, y1)
