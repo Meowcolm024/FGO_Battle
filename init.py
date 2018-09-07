@@ -13,7 +13,7 @@ def init():  # initialize 5 command cards
     return cards
 
 
-def init_cards(sh):
+def init_cards(sh):  # initialize the coordinates of the cards
     global quick, arts, buster
     threshold = 0.95
     quick = get_crd(sh, 'res/quick.png', threshold)
@@ -29,7 +29,7 @@ def init_cards(sh):
     return all_cards
 
 
-def init_status(sh, cards_crd):
+def init_status(sh, cards_crd):  # initialize their status
     restraint = mark_crd(cards_crd, get_restraint(sh), 0)
     resistance = mark_crd(cards_crd, get_resistance(sh), 1)
 
@@ -37,7 +37,7 @@ def init_status(sh, cards_crd):
     mark_resistance(cards, resistance)
 
 
-def rank_card():
+def rank_card():  # main algorithm
     atk = [0, 0, 0]
     total = 0
     rank = [0, 0, 0]
@@ -56,25 +56,25 @@ def rank_card():
                     if k == i or k == j:
                         continue
                     else:
-                        if cards[i].type == 2:
+                        if cards[i].type == 2:  # buster
                             atk[0] = 2 * cards[i].atk
-                            if cards[j].type == 2:
+                            if cards[j].type == 2:  # buster
                                 atk[1] = 2.3 * cards[j].atk
-                            elif cards[j].type == 1:
+                            elif cards[j].type == 1:  # arts
                                 atk[1] = 1.7 * cards[j].atk
-                            elif cards[j].type == 0:
+                            elif cards[j].type == 0:  # quick
                                 atk[1] = 1.46 * cards[j].atk
 
-                            if cards[k].type == 2:
+                            if cards[k].type == 2:  # buster
                                 atk[2] = 2.6 * cards[k].atk
-                            elif cards[k].type == 1:
+                            elif cards[k].type == 1:  # arts
                                 atk[2] = 1.9 * cards[k].atk
-                            elif cards[k].type == 0:
+                            elif cards[k].type == 0:  # quick
                                 atk[2] = 1.62 * cards[k].atk
                         else:
-                            if cards[i].type == 1:
+                            if cards[i].type == 1:  # arts
                                 atk[0] = 1 * cards[i].atk
-                            elif cards[i].type == 0:
+                            elif cards[i].type == 0:  # quick
                                 atk[0] = 0.8 * cards[i].atk
 
                             if cards[j].type == 2:  # buster
@@ -84,11 +84,11 @@ def rank_card():
                             elif cards[j].type == 0:  # quick
                                 atk[1] = 0.96 * cards[j].atk
 
-                            if cards[k].type == 2:
+                            if cards[k].type == 2:  # buster
                                 atk[2] = 2.1 * cards[k].atk
-                            elif cards[k].type == 1:
+                            elif cards[k].type == 1:  # arts
                                 atk[2] = 1.4 * cards[k].atk
-                            elif cards[k].type == 0:
+                            elif cards[k].type == 0:  # quick
                                 atk[2] = 1.12 * cards[k].atk
 
                     if (sum(atk)) > total:
@@ -100,7 +100,7 @@ def rank_card():
     return rank
 
 
-def init_main(sh):
+def init_main(sh):  # get the final 3 selected cards
     init()
     cards_crd = init_cards(sh)
     init_status(sh, cards_crd)

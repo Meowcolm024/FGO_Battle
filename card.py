@@ -6,7 +6,7 @@ _metaclass_ = type
 class Card:
     def __init__(self):
         self.crd = []  # the coordinate of the card (x, y)
-        self.status = 0  # the state of the card "normal(0)" "restraint(1)" "resistance(2)"
+        self.status = 0  # the status of the card "normal(0)" "restraint(1)" "resistance(2)"
         self.type = []  # type of the card "Quick(0)" "Arts(1)" "Buster(2)"
         self.priority = 0  # the priority of the card
         self.atk = 1  # set atk of the card
