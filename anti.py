@@ -6,44 +6,39 @@ import random
 
 def long_tap(x, y):
     delay = random.uniform(0.01, 0.3)
+    delay = round(delay, 2)
     swipe(x, y, x, y, delay)
 
 
 def tap_card(x, y):
     x0 = x + random.uniform(0, 100)
-    y0 = y + random.uniform(0, 150)
-    long_tap(x0, y0)
+    y0 = y + random.uniform(-150, 0)
+    x0 = int(x0)
+    y0 = int(y0)
+    tap(x0, y0)
 
 
 def tap_start(x, y):
     x0 = x + random.uniform(-75, 75)
     y0 = y + random.uniform(-75, 75)
-    long_tap(x0, y0)
+    x0 = int(x0)
+    y0 = int(y0)
+    tap(x0, y0)
 
 
 def random_tap(sh):
-    if check(sh, 'res/start.png', 0.9) == 1:
+    if check(sh, 'res/start.png', 0.75) == 1:
 
-        xa = random.uniform(300, 1000)
-        ya = random.uniform(600, 750)
-        xb = random.uniform(1200, 1500)
-        yb = random.uniform(250, 450)
-
-        if random.randrange(1, 2) == 1:
-            long_tap(xa, ya)
-        else:
-            long_tap(xb, yb)
+        x0 = random.randrange(1200, 1500)
+        y0 = random.randrange(250, 450)
+        tap(x0, y0)
 
     if check(sh, 'res/quick.png', 0.9) == 1 \
             or check(sh, 'res/arts.png', 0.9) \
             or check(sh, 'res/buster.png', 0.9):
 
-        x1 = random.uniform(1650, 1950)
-        y1 = random.uniform(200, 500)
-        x2 = random.uniform(200,500)
-        y2 = random.uniform(180, 420)
+        x1 = random.randrange(1200, 1800)
+        y1 = random.randrange(200, 500)
 
-        if random.randrange(1, 2) == 1:
-            long_tap(x1, y1)
-        else:
-            long_tap(x2, y2)
+        long_tap(x1, y1)
+
