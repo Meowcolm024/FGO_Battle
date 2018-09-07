@@ -1,6 +1,9 @@
 # get the coordinates of cards and marks
 # used to get the range for function mark_crd()
-from card import *
+# check whether the calculation is correct
+# change some parameters in "card.py" "anti.py" if necessary
+from init import *
+from lib.ats import *
 
 
 def cards(sh):
@@ -25,10 +28,12 @@ def marks(sh,):
 
 
 def test():
-    sh = 'test/t5.jpeg'
+    sh = screenshot()
 
-    cards(sh)
-    marks(sh)
+    cards(sh)  # show coordinates of cards
+    marks(sh)  # show coordinates of marks
+
+    print(init_main(sh))  # show the result of calculation
 
 
 test()

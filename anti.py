@@ -4,13 +4,12 @@ from lib.cvs import *
 import random
 
 
-def long_tap(x, y):
-    delay = random.uniform(0.01, 0.3)
-    delay = round(delay, 2)
+def long_tap(x, y):  # random length tap
+    delay = random.randrange(5, 300)
     swipe(x, y, x, y, delay)
 
 
-def tap_card(x, y):
+def tap_card(x, y):  # tap on random location of the card
     x0 = x + random.uniform(0, 100)
     y0 = y + random.uniform(-150, 0)
     x0 = int(x0)
@@ -18,20 +17,20 @@ def tap_card(x, y):
     tap(x0, y0)
 
 
-def tap_start(x, y):
-    x0 = x + random.uniform(-75, 75)
-    y0 = y + random.uniform(-75, 75)
+def tap_start(x, y):  # tap on random location of the button
+    x0 = x + random.uniform(0, 50)
+    y0 = y + random.uniform(-50, 0)
     x0 = int(x0)
     y0 = int(y0)
     tap(x0, y0)
 
 
-def random_tap(sh):
+def random_tap(sh):  # random tap on the screen
     if check(sh, 'res/start.png', 0.75) == 1:
 
         x0 = random.randrange(1200, 1500)
         y0 = random.randrange(250, 450)
-        tap(x0, y0)
+        long_tap(x0, y0)
 
     if check(sh, 'res/quick.png', 0.9) == 1 \
             or check(sh, 'res/arts.png', 0.9) \

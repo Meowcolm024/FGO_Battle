@@ -107,17 +107,6 @@ def init_main(sh):  # get the final 3 selected cards
     set_type(cards, quick, arts, buster)
 
     final = rank_card()
-    # print(final)  # just for testing
+    # print(final)
     selected = [cards[final[0]].crd, cards[final[1]].crd, cards[final[2]].crd]
     return selected
-
-
-"""
-# only for testing
-def main():
-    sh = 'test/t5.jpeg'
-    print(init_main(sh))
-
-
-main()
-"""
