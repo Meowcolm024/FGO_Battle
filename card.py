@@ -34,13 +34,13 @@ def get_crd(sh, tmp, thd):  # get the coordinates of cards/marks
 
 # This part is used to set the status of the cards
 def get_restraint(sh):  # get the coordinates of the restraint mark
-    threshold = 0.9
+    threshold = 0.85
     restraint = get_crd(sh, 'res/restraint.png', threshold)
     return restraint
 
 
 def get_resistance(sh):  # get the coordinates of the resistance mark
-    threshold = 0.9
+    threshold = 0.85
     resistance = get_crd(sh, 'res/resistance.png', threshold)
     return resistance
 

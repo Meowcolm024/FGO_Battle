@@ -5,7 +5,7 @@ import random
 
 
 def long_tap(x, y):  # random length tap
-    delay = random.randrange(5, 300)
+    delay = random.randrange(5, 200)
     swipe(x, y, x, y, delay)
 
 
