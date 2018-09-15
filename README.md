@@ -43,4 +43,10 @@ other versions, please change them QWQ
 The coordinates in the script ares based on screenshots from
 _Huawei Mate 10 Pro_ with a resolution of 2160x1080, you may 
 need to change some parameters if your phone is not this resolution. QAQ  
-Just run _"test.py"_
+Just run _"test.py"_ then you could get the coordinates of the cards
+and compare it with the existed data to check whether a modification is needed
+
+## Known issues
+
+Recognition may not be 100% correct. Thus, the action the script has
+taken may not be the best choice(especially in complicated scenarios)

@@ -47,6 +47,7 @@ def get_resistance(sh):  # get the coordinates of the resistance mark
 
 def mark_crd(card, mark, idk):  # get coordinates with certain marks
     note = []
+    # deviation of the distance between the mark and the card
     rxa = [i for i in range(150, 175)]
     rya = [i for i in range(260, 285)]
     rxb = [i for i in range(235, 260)]
