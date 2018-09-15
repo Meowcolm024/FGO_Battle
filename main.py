@@ -37,7 +37,7 @@ def main():
             time.sleep(random.uniform(0.1, 0.4))
             tap_card(cards[2][0], cards[2][1])
             # wait
-            time.sleep(0.8)
+            time.sleep(1.5)
         # check if the battle ends
         if check(sh, 'res/end.png', 0.9) == 1:
             break
