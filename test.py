@@ -28,12 +28,14 @@ def marks(sh,):
 
 
 def test():
-    sh = screenshot()
+    # sh = screenshot()
+    sh='./test/t1.jpeg'
 
     cards(sh)  # show coordinates of cards
     marks(sh)  # show coordinates of marks
 
+    print('-------------')
     print(init_main(sh))  # show the result of calculation
-
+    print('-------------')
 
 test()
