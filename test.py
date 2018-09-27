@@ -1,9 +1,15 @@
-# get the coordinates of cards and marks
-# used to get the range for function mark_crd()
-# check whether the calculation is correct
-# change some parameters in "card.py" "anti.py" if necessary
+# used for testing
+"""
+get the coordinates of cards and marks
+used to get the range for function mark_crd()
+check whether the calculation is correct
+change some parameters in "card.py" "anti.py" if necessary
+
+Check line 37 and 38, annotate line 37 if you would like test the
+image from your phone, if you only want to test local images,
+annotate line 36 and set the directory of your image
+"""
 from init import *
-from lib.ats import *
 
 
 def cards(sh):
@@ -29,13 +35,15 @@ def marks(sh,):
 
 def test():
     # sh = screenshot()
-    sh='./test/t1.jpeg'
+    sh = 'test/t1.jpeg'
 
+    print('-------------')
     cards(sh)  # show coordinates of cards
     marks(sh)  # show coordinates of marks
 
     print('-------------')
     print(init_main(sh))  # show the result of calculation
     print('-------------')
+
 
 test()
