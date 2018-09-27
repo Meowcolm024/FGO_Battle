@@ -23,6 +23,9 @@ def cards(sh):
     all_cards.sort()
 
     print("cards: ", all_cards)
+    print("quick:", quick)
+    print("arts: ", arts)
+    print("buster: ", buster)
 
 
 def marks(sh,):
@@ -39,10 +42,11 @@ def test():
 
     print('-------------')
     cards(sh)  # show coordinates of cards
+    print('-------------')
     marks(sh)  # show coordinates of marks
 
     print('-------------')
-    print(init_main(sh))  # show the result of calculation
+    print("result: ", init_main(sh))  # show the result of calculation
     print('-------------')
 
 
