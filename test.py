@@ -5,7 +5,7 @@ used to get the range for function mark_crd()
 check whether the calculation is correct
 change some parameters in "card.py" "anti.py" if necessary
 
-Check line 37 and 38, annotate line 37 if you would like test the
+Check line 40 and 41, annotate line 37 if you would like test the
 image from your phone, if you only want to test local images,
 annotate line 36 and set the directory of your image
 """
