@@ -1,5 +1,7 @@
 # FGO_Battle
 
+__Check out [FGO-One](https://github.com/Meowcolm024/FGO-One) for the latest version :)__  
+
 ## About the project
 
 In short, this project is a auto battle script for the game
