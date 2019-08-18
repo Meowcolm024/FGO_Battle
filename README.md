@@ -1,5 +1,7 @@
 # FGO_Battle
 
+__⚠️THIS PROJECT WILL NO LONGER BE MAINTAINED__
+
 __Check out [FGO-One](https://github.com/Meowcolm024/FGO-One) for the latest version :)__  
 
 ## About the project
